@@ -29,3 +29,37 @@ When we know full path for SSH key, now we need to figure out how to download th
 ![obraz](https://github.com/Anogota/Traverxec/assets/143951834/ed0c8af2-b734-439d-b714-00c9466464fe)
 
 After quick recon i know this hash is md5crypt hash, i use hashcat to crack this hash, here is the resoult:Nowonly4me
+And i found this, here we need this credentials
+
+![obraz](https://github.com/Anogota/Traverxec/assets/143951834/dfb12c91-83ff-40b1-b97c-1fb4124f0171)
+
+also on this website we can find SSH key
+
+![obraz](https://github.com/Anogota/Traverxec/assets/143951834/9c968a47-04f1-43e7-b7a1-ebf2326f777b)
+
+i download this key.
+To extract or untar the file to the current directory, type the following, (Making sure to replace file_name.tar with the actual filename) tar -xvf file_name.tar.
+![obraz](https://github.com/Anogota/Traverxec/assets/143951834/e4b38713-899e-4c39-813a-e90079de2d02)
+
+How we must to crack this key i recomend to use johntheripper, this tool is simply and fast
+
+![obraz](https://github.com/Anogota/Traverxec/assets/143951834/2057e5b6-cbee-46b0-ab23-f94b151f3f7f)
+
+With ssh2john u will replace this key into the hash, and now you can crak it.
+
+![obraz](https://github.com/Anogota/Traverxec/assets/143951834/e8be65bf-4af9-4543-8b82-20898d11dd1d)
+
+When i try use john i encountered weird problem, if u will have the same, how i have you will be know how to solve this problem
+
+![obraz](https://github.com/Anogota/Traverxec/assets/143951834/2c02968f-efc6-4180-b539-b25741d05568)
+
+first u must login as root, and write in terminal: rm /home/kali/.john/john.rec  And the problem solved, now u can normaly use ur johntheripper.
+Now we need log in to SSH
+But before this i got again some error
+
+![obraz](https://github.com/Anogota/Traverxec/assets/143951834/ff3f5260-0864-491d-8a98-4ef24bf87d60)
+
+If u can't connect to SSH try this command: sudo ifconfig tun0 mtu 1200  This help and now i can connect to SSH.
+
+![obraz](https://github.com/Anogota/Traverxec/assets/143951834/17257760-051b-4911-b5d2-206884ca0171)
+
