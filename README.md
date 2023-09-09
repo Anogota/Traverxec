@@ -70,4 +70,17 @@ i can't use command sudo -l to check it but i look around i found this
 ![obraz](https://github.com/Anogota/Traverxec/assets/143951834/dbe67134-f05d-4fe5-9d75-4bd3394bc8aa)
 
 5.What is the default pager that gets invoked when journalctl has more lines of output than will fit on the current terminal?
+We can check this by command pager -s:
+![obraz](https://github.com/Anogota/Traverxec/assets/143951834/6788aac9-00ae-4a3f-9db3-29632577592a)
 
+6.Submit the flag located in root's home directory.
+Omg, that for me was hard, we need to again check this script
+
+![obraz](https://github.com/Anogota/Traverxec/assets/143951834/98c71427-35cc-45b4-89b1-f32e9a67fcfa)
+
+We know, we don't need root to run journalctl, try this copy and past but this don't wanna work, i go to gtfobins i search something about it, and there is only 
+![obraz](https://github.com/Anogota/Traverxec/assets/143951834/6ea0e1f4-aab4-4a9a-a43e-6adece4e15de)
+
+The trick here is that journalctrl will output to stdout if it can fit onto the current page, but into less if it can’t. Since I’m running it with -n 5, that means only five lines come out, so I need to shrink my terminal to smaller than 5 lines, and I’ll get sent into less, still as root.
+
+![obraz](https://github.com/Anogota/Traverxec/assets/143951834/28aa885e-947f-4d4f-b71f-75feb1ba612e)
