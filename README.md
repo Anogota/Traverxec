@@ -62,4 +62,12 @@ But before this i got again some error
 If u can't connect to SSH try this command: sudo ifconfig tun0 mtu 1200  This help and now i can connect to SSH.
 
 ![obraz](https://github.com/Anogota/Traverxec/assets/143951834/17257760-051b-4911-b5d2-206884ca0171)
+![obraz](https://github.com/Anogota/Traverxec/assets/143951834/640fd00a-1b43-4d02-b5aa-4a9af3ecdc99)
+
+4.What is the name of the binary that david can run as root without a password?
+i can't use command sudo -l to check it but i look around i found this
+
+![obraz](https://github.com/Anogota/Traverxec/assets/143951834/dbe67134-f05d-4fe5-9d75-4bd3394bc8aa)
+
+5.What is the default pager that gets invoked when journalctl has more lines of output than will fit on the current terminal?
 
